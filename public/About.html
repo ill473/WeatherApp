@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/weather.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    
+    <div id="overlay">
+        <p style="position:relative; left:41rem; top:16rem; ">Searching for Weather info...</p>
+        <svg viewBox="0 0 100 100">
+            <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+                <!-- left line -->
+                <path d="M 21 40 V 59">
+                    <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 21 59; 180 21 59"
+              dur="2s"
+              repeatCount="indefinite" />
+                </path>
+                <!-- right line -->
+                <path d="M 79 40 V 59">
+                    <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 79 59; -180 79 59"
+              dur="2s"
+              repeatCount="indefinite" />
+                </path>
+                <!-- top line -->
+                <path d="M 50 21 V 40">
+                    <animate
+              attributeName="d"
+              values="M 50 21 V 40; M 50 59 V 40"
+              dur="2s"
+              repeatCount="indefinite" />
+                </path>
+                <!-- btm line -->
+                <path d="M 50 60 V 79">
+                    <animate
+              attributeName="d"
+              values="M 50 60 V 79; M 50 98 V 79"
+              dur="2s"
+              repeatCount="indefinite" />
+                </path>
+                <!-- top box -->
+                <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+                <animate
+              attributeName="stroke"
+              values="rgba(255,255,255,1); rgba(100,100,100,0)"
+              dur="2s"
+              repeatCount="indefinite" />
+                </path>
+                <!-- mid box -->
+                <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z"/>
+                <!-- btm box -->
+                <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+                <animate
+              attributeName="stroke"
+              values="rgba(100,100,100,0); rgba(255,255,255,1)"
+              dur="2s"
+              repeatCount="indefinite" />
+                </path>
+                <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              values="0 0; 0 -19"
+              dur="2s"
+              repeatCount="indefinite" />
+            </g>
+        </svg>
+    </div>
+
+
+    <div class="primary-nav">
+
+        <button class="hamburger open-panel nav-toggle">
+            <span class="screen-reader-text">Menu</span>
+        </button>
+    
+        <nav class="menu">
+    
+            <a href="#" class="logotype"><i class="fa fa-bolt"></i> <span>I-Weather</span></a>
+    
+            <div class="overflow-container">
+    
+                <ul class="menu-dropdown">
+    
+                    <li><a href="index.html">Weather App</a><span class="icon"><i class="fa fa-dashboard"></i></span></li>
+    
+                    <!-- <li class="menu-hasdropdown">
+                            <a href="#">Settings</a><span class="icon"><i class="fa fa-gear"></i></span>
+        
+                            <label title="toggle menu" for="settings">
+                                <span class="downarrow"><i class="fa fa-caret-down"></i></span>
+                            </label>
+
+                            <input type="checkbox" class="sub-menu-checkbox" id="settings" />
+    
+                            <ul class="sub-menu-dropdown">
+                                <li><a href="">Profile</a></li>
+                                <li><a href="">Security</a></li>
+                                <li><a href="">Account</a></li>
+                            </ul>
+                    </li> -->
+    
+                    
+                    <!-- <li><a href="About.html">About</a><span class="icon"><i class="fa fa-heart"></i></span></li> -->
+    
+                    <!-- <li><a href="#">Messages</a><span class="icon"><i class="fa fa-envelope"></i></span></li> -->
+    
+                </ul>
+    
+            </div>
+    
+        </nav>
+    
+    </div>
+
+  
+   
+<main>
+  <div class = "cardAbout">
+    <img id="abtID" src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+    <div class="card-content">
+      <h2>
+        About
+      </h2>
+      <p>
+        This weather app is an application that provides users with information about the weather. It can includes features such as temperature, severe weather patterns, time and date, or hyper-local forecasts that are incredibly detailed. The aim with future updates is to show climate and nature change on the planet for a specific period or even give the current weather data2.
+      </p>
+      <a href="#" class="button">
+        Find out more 
+      </a>
+    </div>
+  </div>
+</main>
+
+   
+
+   
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script src="js/global.js"></script>
+
+<!-- Stuff from template -->
+
+</body>
+</html>
