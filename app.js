@@ -9,7 +9,7 @@ app.use(express.static('./public'));
 
 app.get("/", function(req, res){
 
-    const APIkey = "appid=f43963759a640c5d2a812d5860e0c424";
+    const APIkey = "Use Your Own API KEY";
     const url ="https://api.openweathermap.org/data/2.5/weather?q=Castries&lon=-344.04&"+APIkey;
     https.get(url, function(response){
         console.log(response.statusCode);

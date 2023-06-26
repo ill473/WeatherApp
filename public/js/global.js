@@ -77,7 +77,7 @@ function locationWeather(lat, lng){
     console.log(lat, lng);
 
     //take lat and lng and do api call to get data we need
-    const api = "https://api.openweathermap.org/data/2.5/weather?lon="+lng+"&lat="+lat+"&appid=f43963759a640c5d2a812d5860e0c424&units=metric";
+    const api = "https://api.openweathermap.org/data/2.5/weather?lon="+lng+"&lat="+lat+"&appid=useyourownapikey&units=metric";
 
     fetch(api)
           .then((response) => {
@@ -216,7 +216,7 @@ function ShowSearch($City){
     
             try {
                
-                const api = "https://api.openweathermap.org/data/2.5/weather?q="+$City+"&appid=f43963759a640c5d2a812d5860e0c424&units=metric";
+                const api = "https://api.openweathermap.org/data/2.5/weather?q="+$City+"&appid=USEYOUROWNAPIKEY&units=metric";
 
                 fetch(api)
                       .then((response) => {
@@ -262,7 +262,7 @@ function ShowSearch($City){
                         console.log(latT + " " + longT);
 
                         try{
-                            const api = "http://api.timezonedb.com/v2.1/get-time-zone?key=TW70AR1UJ5JL&format=json&by=position&lat="+latT+"&lng="+longT+"";
+                            const api = "http://api.timezonedb.com/v2.1/get-time-zone?key=USEYOUROWNAPIKEY&format=json&by=position&lat="+latT+"&lng="+longT+"";
                             fetch(api)
                                 .then((response) => {
                                     return response.json();
